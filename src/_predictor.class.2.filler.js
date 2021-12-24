@@ -1,15 +1,18 @@
 class Filler {
-    constructor() {
-        this.sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('src');
+    /**
+     * @param {Navigator} navigator
+     */
+    constructor(navigator) {
+        this.nav = navigator;
     }
 
     /**
      * @param {Predictor} predictor
      */
     fill(predictor) {
-        predictor.subjects = this.getColumnValues(1, 2);
-        predictor.actions = this.getColumnValues(2, 2);
-        predictor.objects = this.getColumnValues(3, 2);
+        predictor.subjects = this.getColumnValues(this.nav.subjectsCol, 2);
+        predictor.actions = this.getColumnValues(this.nav.actionsCol, 2);
+        predictor.objects = this.getColumnValues(this.nav.objectsCol, 2);
     }
 
     /**
@@ -22,7 +25,7 @@ class Filler {
         let result = [];
         let row = startRow;
         while (true) {
-            const cell = this.sheet.getRange(row, column);
+            const cell = this.nav.wordsSheet.getRange(row, column);
             const value = cell.getValue();
             if (!value) {
                 break;
