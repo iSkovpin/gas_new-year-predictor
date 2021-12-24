@@ -7,13 +7,14 @@ class Navigator {
         this.actionsCol = 2;
         this.objectsCol = 3;
 
-        this.predictionIdCol = 1;
-        this.predictionRecipientCol = 2;
-        this.predictionTextCol = 3;
-        this.predictionTranslateCol = 4;
-        this.predictionStyleCol = 5;
-        this.predictionFilenameCol = 6;
-        this.predictionFileUrlCol = 7;
+        this.predictionNumCol = 1;
+        this.predictionIdCol = 2;
+        this.predictionRecipientCol = 3;
+        this.predictionTextCol = 4;
+        this.predictionTranslateCol = 5;
+        this.predictionStyleCol = 6;
+        this.predictionFilenameCol = 7;
+        this.predictionFileUrlCol = 8;
     }
 
     /**
