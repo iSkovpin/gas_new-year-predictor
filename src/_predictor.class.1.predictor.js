@@ -15,7 +15,7 @@ class Predictor {
         this.usedSubjects = [];
     }
 
-    newPrediction() {
+    addNewPrediction() {
         let cell = this.nav.getNewPredictionCell();
         this.updatePredictionForCell(cell);
     }
